@@ -1,0 +1,274 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 5px solid #14248a;
+    flex-wrap: wrap;
+}
+
+h2 {
+    font-size: 50px; 
+}
+
+nav .onglets {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav .onglets a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+.text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 300px;
+    height: 750px;
+    padding: 20px;
+    margin: 0px 0px 20px 0px;
+    background-color: #14248a;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: 1s;
+    
+}
+
+.text .non {
+    font-size: 24px;
+    color: white;
+    opacity: 1;
+    transition: 0.4s;
+    transition-delay: 0.8s;
+}
+
+.text .oui {
+    font-size: 24px;
+    color: white;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 0.7s;
+}
+
+.text:hover {
+    width: 100%;
+}
+
+.text:hover .non {
+    opacity: 0;
+}
+.text:hover .oui {
+    opacity: 1;
+}
+
+.card-moi {
+    height: 75%;
+    width: 75%;
+    object-fit: cover;
+    max-height: 500px;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.Lum {
+    display: flex;
+    height: 400px;
+    width: 600px;
+    padding: 0px 0px 50px 0px
+}
+
+.Arch {
+    display: flex;
+    height: 400px;
+    width: 600px;
+    padding: 10px 0px 50px 0px
+}
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+}
+
+.grid .detail {
+    padding: 15px;
+}
+
+.grid > div:nth-of-type(1) {
+    background-color: #14248a;
+    color: white;
+}
+
+.grid > div:nth-of-type(2) {
+    color: white;
+    background-color: #BCC4DB;
+}
+
+.grid-image {
+    width: 100%;
+}
+
+
+
+.card {
+    width: 100%;
+    color: #121212;
+    margin: 20px;
+    padding: 20px;
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: fill;
+}
+
+.card-content {
+    padding: 20px 30px;
+}
+
+.card h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 0.5em;
+}
+
+.card a {
+    color: #121212;
+}
+
+.card p {
+    color: #787878;
+    font-size: 16px;
+    margin-bottom: 2em;
+}
+
+.card-shadow {
+    box-shadow: 0 10px 10px rgba(187, 187, 187, 0.5);
+}
+
+
+
+.link {
+    background-color: #14248a;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+}
+
+.button {
+    background-color: white;
+    color: #14248a;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em 2em;
+    font-size: 24px;
+    transition: 1s;
+    border-radius: 2em;
+}
+
+.button-white {
+    background-color: #14248a;
+    color: white;
+    border-style: groove;
+}
+
+.button:hover {
+    background-color: #14248a;
+    color: white;
+    border-style: groove;
+}
+
+.button-white {
+    background-color: #14248a;
+}
+
+.button-white:hover{
+    background-color: white;
+    color: #14248a;
+}
+
+.rotation {
+    display: block;
+    margin: 40px auto;
+    animation: 3s infinite linear tourne;
+    height: 200px;
+}
+
+@keyframes tourne {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360DEG);
+    }
+
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+    }
+    
+    .onglets {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    nav .onglets a{
+        font-size: 25px;
+    }
+
+    .grid {
+            grid-template-columns: 1fr;
+        }  
+
+    .Lum {
+        display: flex;
+        height: 310px;
+        width: 465px;
+        padding: 10px 0px 50px 0px
+    }
+
+    .Arch {
+        display: flex;
+        height: 310px;
+        width: 465px;
+        padding: 10px 0px 50px 0px
+    } 
+
+    .button {
+        font-size: 18px;
+    } 
+    
+}
